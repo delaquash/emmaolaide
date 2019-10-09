@@ -1,40 +1,14 @@
-$primary-color: #4444;
-$show-back: true;
-$secondary-color: #eece1a;
-$back:url('https://images.unsplash.com/photo-1431352832634-845fad190fbd?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=ec80c41e488dc2b99ed543df2f3f0919');
-;
+@import 'config';
+@import 'menu';
 
-@mixin easeOut {
-    transition: all 0.5s ease-out;
-}
 
-@mixin  back {
-    @if $show-back {
-        &#bg-img {
-            background: $back;
-            background-attachment: fixed;
-            background-size: cover; 
-            
-            .overlay {
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 100%;
-                height: 100%;
-                
-            }
-        }
-       
-    }
-    
-}
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    @include back;
+    // @include $back;
     background: $back;
     background-position: center center;
     background-origin: content-box;
@@ -110,3 +84,4 @@ main {
         }
     }
 }
+
